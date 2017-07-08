@@ -1,10 +1,39 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="search-wrapper">  
+  <view class="search-section">
+    <input focus/>
+    
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <view class="search-info">
+    <icon class="search-image" type="search" size="12" color="rgb(196,195,200)"/>
+    <text class="search-text">搜索</text>
+   </view> 
 </view>
+<view class="search-plan" />
+
+<view class="daily-paper">
+  <view class="daily-header">
+    <text>小鱼日报</text>
+  </view>
+
+  <view class="daily-content">
+    <view class="daily-content-item">
+      <image mode="scaleToFill" src="../../images/img1.png" />
+      <view class="daily-content-text">
+        <test class="daily-content-text-header">这里是标题</test>
+        <text class="daily-content-text-info">这里是描述</text>
+      </view>
+    </view>    
+    <view class="daily-content-item">
+
+    </view>
+    <view class="daily-content-item">
+
+    </view>
+    <view class="daily-content-item">
+
+    </view>
+  </view>
+
+</view>
+
