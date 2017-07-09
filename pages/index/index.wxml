@@ -16,8 +16,8 @@
 
 <!-- 小鱼日报 -->
 <view>
-  <text style="color: #101010;font-size: 70%;margin: 20rpx 25rpx 20rpx">小鱼日报</text>
-
+  <text style="color: #101010;font-size: 70%;margin: 20rpx 25rpx">小鱼日报</text>
+  <view class="divLine" style="height: 10rpx"></view> 
   <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
   <!-- 分割线 -->
     <block wx:for-items="{{dailyList}}">
