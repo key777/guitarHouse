@@ -1,48 +1,45 @@
-/**index.wxss**/
-.search-wrapper{
-  position: relative;
-  height: 80rpx;
-  width: 100%;
-  background-color: #F8F8F8;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;  
-}
-
 .search-section{
   position: relative;
-  width: 94%;
-  height: 80%;
-  border: 3rpx solid #EBEBEB;
-  border-radius:0.2em;
-  background-color: #fff;
-  order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+.search-box{
+   width:94%; 
+   border: 3rpx solid #ebebeb;
+   border-radius:0.2em;
+   background: #fff;
 }
 
 .search-info{
   position: absolute;
-  height: 80%;
-  width: 30%;
-  bottom: 0rpx;
-  order: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.search-text{
-  color: #C4C3C8;
-  font-size: 70%;
-  margin-left: 6rpx;
-}
-
-.search-plan{
-  height: 15rpx;
   width: 100%;
-  background-color: #F8F8F8;
+  height: 100%;
+
 }
 
+.dailyContainsView{
+  position: relative;
+  height: 380rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dailyContainsText{
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+}
+/*----------------------------*/
 .daily-content{
   display: flex;
   flex-direction: column;

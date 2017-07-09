@@ -1,39 +1,34 @@
-<!--index.wxml-->
-<view class="search-wrapper">  
-  <view class="search-section">
-    <input focus/>
-    
-  </view>
-  <view class="search-info">
-    <icon class="search-image" type="search" size="12" color="rgb(196,195,200)"/>
-    <text class="search-text">搜索</text>
-   </view> 
-</view>
-<view class="search-plan" />
+<!--<loading hidden="{{loadingHidden}}">正在加载...</loading>-->
 
-<view class="daily-paper">
-  <view class="daily-header">
-    <text>小鱼日报</text>
-  </view>
-
-  <view class="daily-content">
-    <view class="daily-content-item">
-      <image mode="scaleToFill" src="../../images/img1.png" />
-      <view class="daily-content-text">
-        <test class="daily-content-text-header">这里是标题</test>
-        <text class="daily-content-text-info">这里是描述</text>
+<view class="search-wrapper">
+  <view class="divLine" style="height: 10rpx;background: #f8f8f8"></view>
+    <view class="search-section">
+      <view class="search-box">
+        <input bindfocus="searchBoxFocus" bindblur="searchBoxUrl"/>
       </view>
-    </view>    
-    <view class="daily-content-item">
-
+      <view hidden="{{searchInfoHidden}}" class="search-info">
+        <icon class="search-image" type="search" size="12" color="rgb(196,195,200)"/>
+        <text style="color: #c4c3c8;font-size: 70%;margin-left: 6rpx">搜索</text>
+      </view>
     </view>
-    <view class="daily-content-item">
-
-    </view>
-    <view class="daily-content-item">
-
-    </view>
-  </view>
-
+  <view class="divLine" style="height: 10rpx;background: #f8f8f8"></view> 
 </view>
 
+<!-- 小鱼日报 -->
+<view>
+  <text style="color: #101010;font-size: 70%;margin: 20rpx 25rpx 20rpx">小鱼日报</text>
+
+  <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+  <!-- 分割线 -->
+    <block wx:for-items="{{dailyList}}">
+      <view class="dailyContainsView">
+        <image mode="scaleToFill" src="{{item.profile_image}}" style="width: 90%"/>
+        <view class="dailyContainsText">   
+          <test style="position: relative;font-size: 100%;left: 6%">{{item.dailyTitle}}</test>
+          <text style="position: relative;font-size: 65%;left: 8%">{{item.dailyConfig}}</text>
+        </view>
+      </view>
+      <view class="divLine" style="height: 18rpx"></view> 
+    </block>
+  </scroll-view>
+</view>
