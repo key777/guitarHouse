@@ -1,0 +1,65 @@
+<!--<view class="container">
+ 
+  <view class="selection">
+    <swiper indicator-dots="true"
+      autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>-->
+
+<!----------------分割线------------------------->
+
+<!--<loading hidden="{{loadingHidden}}">正在加载...</loading>-->
+
+<!--页面标题栏-->
+<view class="fishpondHeader" style="positin:fixed;top: 0rpx; height: 100rpx;width: 100%">
+    <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:4%;height: 60%;width: 60rpx" />
+    <view class="fishpondTabar">
+        <block>鱼塘</block>
+        <block>音乐达人</block>
+        <block>曲谱</block>
+    </view>
+    <icon class="search-image" type="search" size="30" style="position: relative;right: 4%" color="rgb(196,195,200)"/>
+</view>
+
+<!--每日一句-->
+<text style="font-size: 70%">弹琴是件快乐又痛苦的事情，就像活在这个世界上</text>
+
+<view class="divLine" style="height: 25rpx;background-color: #e4ecef" />
+
+<!--页面内分页-->
+<view style="height: 1070rpx;width: 100%">
+    <swiper style="height: 100%" current="1">
+        <swiper-item style="background-color: red">
+            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+            <!-- 分割线 -->
+                <block wx:for-items="{{imgUrls}}">
+                    <image mode="scaleToFill" src="{{item}}" width="100%"/>
+                </block>
+            </scroll-view>        
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+            <!-- 分割线 -->
+                <block wx:for-items="{{imgUrls}}">
+                    <image mode="scaleToFill" src="{{item}}" width="100%"/>
+                </block>
+            </scroll-view>        
+        </swiper-item>
+        <swiper-item style="background-color: yellow">
+            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+            <!-- 分割线 -->
+                <block wx:for-items="{{imgUrls}}">
+                    <view style="width: 100%">
+                        <image mode="scaleToFill" src="{{item}}" style="width: 90%"/>
+                    </view>
+                </block>
+            </scroll-view>        
+        </swiper-item>
+    </swiper>
+</view>

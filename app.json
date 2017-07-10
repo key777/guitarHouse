@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/forum/sdf",
     "pages/forum/forum",
-    "pages/fishpond/musicScore/musicScore"
+    "pages/fishpond/musicScore/musicScore",
+    "pages/fishpond/fishpond"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -47,13 +48,14 @@
         "iconPath": "images/tb4-off.png",
         "selectedIconPath": "images/tb4-on.png",
         "text": "我"
-      }]
-    },
-    "networkTimeout": {
-      "request": 10000,
-      "connectSocket": 10000,
-      "uploadFile": 10000,
-      "downloadFile": 10000
-    },
-    "debug": true
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

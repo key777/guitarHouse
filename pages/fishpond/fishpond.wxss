@@ -1,0 +1,11 @@
+.fishpondHeader{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fishpondTabar{
+    display: flex;
+    justify-content: space-between;
+}
