@@ -29,9 +29,7 @@ App({
 
   /* http请求 */
   requestData: function (a, cb) {
-    // var that = this;
       wx.request({
-        // url: 'http://localhost:80/json/mainPage.json',
       url: a.url,
       data: {
         a: a,

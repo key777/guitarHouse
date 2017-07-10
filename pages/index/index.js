@@ -25,19 +25,6 @@ Page({
         // maxtime: res.data.info.maxtime
       })
     });
-    // that.setData({
-    //   dailyList: that.data.dailyList.concat(reqPageCfg.data.dailyList),
-    //   loadingHidden: true,
-    //   maxtime: reqPageCfg.data.info.maxtime      
-    // })
-
-    // console.log(res.data.dailyList)
-    // console.log('上一页', that.data.dailyList)
-    // that.setData({
-    //   // 拼接数组
-    //   dailyList: that.data.dailyList.concat(res.data.dailyList),
-    //   loadingHidden: true,
-    //   // maxtime: res.data.info.maxtime
   },
 
 
