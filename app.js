@@ -25,5 +25,27 @@ App({
 
   globalData: {
     userInfo: null
+  },
+
+  /* http请求 */
+  requestData: function (a, cb) {
+    // var that = this;
+      wx.request({
+        // url: 'http://localhost:80/json/mainPage.json',
+      url: a.url,
+      data: {
+        a: a,
+        c: 'data',
+        // 上一页的maxtime作为加载下一页的条件，
+        // maxtime: this.data.maxtime,
+        type: '10',
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
+        typeof cb == "function" && cb(res)
+      }
+    })
   }
+
 })
