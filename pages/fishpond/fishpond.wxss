@@ -6,6 +6,20 @@
 }
 
 .fishpondTabar{
+    font-size: 100%;
+    font-weight:bold;
+    color: #584F60;
+    width: 60%;
     display: flex;
     justify-content: space-between;
+}
+.fpTabarSelect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dailyMotto{
+    display: flex;
+    align-items: center;
 }

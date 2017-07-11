@@ -18,23 +18,28 @@
 
 <!--页面标题栏-->
 <view class="fishpondHeader" style="positin:fixed;top: 0rpx; height: 100rpx;width: 100%">
-    <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:4%;height: 60%;width: 60rpx" />
+    <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:3%;height: 50%;width: 50rpx" />
     <view class="fishpondTabar">
-        <block>鱼塘</block>
-        <block>音乐达人</block>
-        <block>曲谱</block>
+        <view class="fpTabarSelect" wx:for-items="{{fishpondTabarList}}">
+            <text bindtap="switchSwiper" id="{{item.id}}" >{{item.data}}</text>
+            <view hidden="{{!item.selection}}" class="divLine" style="height: 5rpx;width: 65%;background-color: #48464b" />
+        </view>
     </view>
-    <icon class="search-image" type="search" size="30" style="position: relative;right: 4%" color="rgb(196,195,200)"/>
+    <icon class="search-image" type="search" size="25" style="position: relative;right:3%" color="rgb(196,195,200)"/>
 </view>
 
 <!--每日一句-->
-<text style="font-size: 70%">弹琴是件快乐又痛苦的事情，就像活在这个世界上</text>
+<view class="dailyMotto" style="position: relative;left: 2%;height: 60rpx">
+    <!--<mage src="../../images/motto.png" mode="scaleToFill" style="height:100%; width: 60rpx" />-->
+     <icon type="cancel" size="15" color="rgb(151,151,153)"/>
+    <text style="font-size: 60%;color: rgb(84,78,88);margin-left:15rpx">弹琴是件快乐又痛苦的事情，就像活在这个世界上</text>
+</view>
 
 <view class="divLine" style="height: 25rpx;background-color: #e4ecef" />
 
 <!--页面内分页-->
 <view style="height: 1070rpx;width: 100%">
-    <swiper style="height: 100%" current="1">
+    <swiper style="height: 100%" current="{{swiperCurrent}}">
         <swiper-item style="background-color: red">
             <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
             <!-- 分割线 -->
