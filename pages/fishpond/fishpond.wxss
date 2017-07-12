@@ -42,9 +42,9 @@
 
 .forumContainsTop{
     position: relative;
-    height: 200rpx;
-    width: 80%;
-    padding-top: 40rpx;
+    height: 250rpx;
+    width: 85%;
+    padding-top: 60rpx;
     display: flex;
 }
 .forumProfileImage{
@@ -62,6 +62,7 @@
 .forumtopViewCnt{
     position: absolute;
     height: 40rpx;
+    margin: 30rpx;
     right: 1rpx;
     display: flex;
     align-items: center;
