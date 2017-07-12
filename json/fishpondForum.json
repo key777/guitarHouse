@@ -1,0 +1,14 @@
+[{
+		"profileImage":"http://localhost:80/image/profileImage/喵喵C.png",
+		"name": "喵喵C",
+		"passtime": "刚刚",
+		"viewImage": "../../images/viewEye.png",
+		"viewCnt":"10"
+	},
+	{
+		"profileImage":"http://localhost:80/image/profileImage/喵喵C.png",
+		"name": "喵喵C",
+		"passtime": "刚刚",
+		"viewImage": "../../images/viewEye.png",
+		"viewCnt":"10"
+}]

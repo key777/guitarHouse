@@ -1,3 +1,16 @@
 {
-  "developerName": "俞恒"
+  "developerName": "俞恒",
+  "dailyList": [{
+		"profile_image": "http://localhost:80/image/吉他0基础教程.png",
+		"dailyTitle": "吉他0基础教程",
+		"dailyConfig": "第一课，7分钟"},
+	{
+		"profile_image": "http://localhost:80/image/海棠妹妹_喜欢你.png",
+		"dailyTitle": "音乐达人-海棠妹妹",
+		"dailyConfig": "《喜欢你》，8分钟"},
+	{
+		"profile_image": "http://localhost:80/image/云杉玫瑰木单板.png",
+		"dailyTitle": "新品上架",
+		"dailyConfig": "云杉玫瑰木单板系列"
+	}]
 }
