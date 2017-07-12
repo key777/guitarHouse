@@ -20,7 +20,7 @@
   <view class="divLine" style="height: 10rpx"></view> 
   <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
   <!-- 分割线 -->
-    <block wx:for-items="{{dailyList}}">
+    <block wx:for-items="{{dailyList}}" wx:key="dailyList">
       <view class="dailyContainsView">
         <image mode="scaleToFill" src="{{item.profile_image}}" style="width: 90%"/>
         <view class="dailyContainsText">   

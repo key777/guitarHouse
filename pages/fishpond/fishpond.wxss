@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .fpTabarSelect{
     display: flex;
     flex-direction: column;
@@ -23,3 +24,68 @@
     display: flex;
     align-items: center;
 }
+
+.forumHearder{
+    position: relative;
+    height: 60rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.forumContains{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forumContainsTop{
+    position: relative;
+    height: 200rpx;
+    width: 80%;
+    padding-top: 40rpx;
+    display: flex;
+}
+.forumProfileImage{
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 150rpx;
+}
+
+.forumtopPassInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx 20rpx;
+}
+
+.forumtopViewCnt{
+    position: absolute;
+    height: 40rpx;
+    right: 1rpx;
+    display: flex;
+    align-items: center;
+}
+
+.forumViewImage{
+    height: 40rpx;
+    width: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

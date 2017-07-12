@@ -1,3 +1,5 @@
+var app = getApp()
+
 Page({
   data:{
     fishpondTabarList: [
@@ -12,7 +14,26 @@ Page({
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
     ],
     contentItems:['','','',''],
-    listItems:['','','','','','','']
+    listItems:['','','','','','',''],
+    attentionNum: 0,
+    fishpondForumList: []
+  },
+  onLoad: function () {
+    var that = this;
+    var requestArg = {
+          url: 'http://localhost:80/json/fishpondForum.json',
+          data: null};
+
+    // 页面初始化时默认显示鱼塘论坛页
+    app.requestData(requestArg, function(res){
+      that.setData({
+        // 拼接数组
+
+        fishpondForumList: that.data.fishpondForumList.concat(res.data),
+        loadingHidden: true,
+        // maxtime: res.data.info.maxtime
+      })
+    });
   },
 // 动态滚动展示页面
   switchSwiper: function(e){
@@ -32,6 +53,7 @@ Page({
     that.setData({
       swiperCurrent: e.currentTarget.id,
       fishpondTabarList: that.data.fishpondTabarList,
+      fishpondForumList: that.data.fishpondForumList
     })
   },
 })

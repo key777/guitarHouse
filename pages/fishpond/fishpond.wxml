@@ -20,46 +20,67 @@
 <view class="fishpondHeader" style="positin:fixed;top: 0rpx; height: 100rpx;width: 100%">
     <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:3%;height: 50%;width: 50rpx" />
     <view class="fishpondTabar">
-        <view class="fpTabarSelect" wx:for-items="{{fishpondTabarList}}">
+        <view class="fpTabarSelect" wx:for-items="{{fishpondTabarList}}" wx:key="fishpondTabarList">
             <text bindtap="switchSwiper" id="{{item.id}}" >{{item.data}}</text>
-            <view hidden="{{!item.selection}}" class="divLine" style="height: 5rpx;width: 65%;background-color: #48464b" />
+            <view hidden="{{!item.selection}}" class="divLine" style="height: 7rpx;width: 60%;background-color: #48464b" />
         </view>
     </view>
-    <icon class="search-image" type="search" size="25" style="position: relative;right:3%" color="rgb(196,195,200)"/>
+    <image src="../../images/search.png" mode="scaleToFill" style="position: relative;right:3%;height: 50%;width: 50rpx" />
 </view>
 
 <!--每日一句-->
-<view class="dailyMotto" style="position: relative;left: 2%;height: 60rpx">
+<view class="dailyMotto" style="position: relative;height: 60rpx">
     <!--<mage src="../../images/motto.png" mode="scaleToFill" style="height:100%; width: 60rpx" />-->
-     <icon type="cancel" size="15" color="rgb(151,151,153)"/>
+    <image src="../../images/close.png" mode="scaleToFill" style="height: 70%;width: 42rpx;margin-left:15rpx" />
     <text style="font-size: 60%;color: rgb(84,78,88);margin-left:15rpx">弹琴是件快乐又痛苦的事情，就像活在这个世界上</text>
 </view>
 
-<view class="divLine" style="height: 25rpx;background-color: #e4ecef" />
+<view class="divLine" style="height: 20rpx;background-color: #e4ecef" />
 
 <!--页面内分页-->
-<view style="height: 1070rpx;width: 100%">
+<view style="height: 1000rpx;width: 100%">
     <swiper style="height: 100%" current="{{swiperCurrent}}">
-        <swiper-item style="background-color: red">
-            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+        <!--吉他屋论坛页面-->
+        <swiper-item>
+            <view class="forumHearder">
+                <text style="font-size: 80%;font-weight:bold;margin-left:18rpx">已经关注{{attentionNum}}鱼</text>
+            </view>
             <!-- 分割线 -->
-                <block wx:for-items="{{imgUrls}}">
-                    <image mode="scaleToFill" src="{{item}}" width="100%"/>
-                </block>
+            <view class="divLine" style="height: 4rpx;background-color: #dadada;margin-bottom: 10rpx" />
+            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+                <view class="forumContains">
+                    <block wx:for-items="{{fishpondForumList}}" wx:key="fishpondForumList">
+                        <view class="forumContainsTop">
+                            <image class="forumProfileImage" src="{{item.profileImage}}"/>
+                            <view class="forumtopPassInfo">
+                                <text class="forumtopUsrName" style="font-weight:bold">{{item.name}}</text>
+                                <text class="forumtopPassTime" style="font-size:70%;margin:5rpx 10rpx">{{item.passtime}}</text>
+                            </view>
+                            <view class="forumtopViewCnt">
+                                <image class="forumViewImage" src="{{item.viewImage}}" />
+                                <text style="font-size:65%;font-weight:bold;margin:0 10rpx">{{item.viewCnt}}</text>
+                            </view>
+                        </view>
+                        <image mode="scaleToFill" src="{{item}}"/>
+                        <view class="divLine" style="height: 3rpx;width: 85%;margin: 5rpx 0 5rpx 0;background-color: #cfced8" />
+                    </block>
+                </view>
             </scroll-view>        
         </swiper-item>
+        <!--音乐达人页面-->
         <swiper-item>
             <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
             <!-- 分割线 -->
-                <block wx:for-items="{{imgUrls}}">
+                <block wx:for-items="{{imgUrls}}"  wx:key="imgUrls">
                     <image mode="scaleToFill" src="{{item}}" width="100%"/>
                 </block>
             </scroll-view>        
         </swiper-item>
+        <!--曲谱页面-->
         <swiper-item style="background-color: yellow">
             <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
             <!-- 分割线 -->
-                <block wx:for-items="{{imgUrls}}">
+                <block wx:for-items="{{imgUrls}}"  wx:key="imgUrls">
                     <view style="width: 100%">
                         <image mode="scaleToFill" src="{{item}}" style="width: 90%"/>
                     </view>
