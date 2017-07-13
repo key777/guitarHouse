@@ -2,7 +2,7 @@
  
   <view class="selection">
     <swiper indicator-dots="true"
-      autoplay="true" interval="3000" duration="1000">
+      auToplay="true" interval="3000" duration="1000">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
           <image src="{{item}}" class="slide-image" width="355" height="150"/>
@@ -17,7 +17,7 @@
 <!--<loading hidden="{{loadingHidden}}">正在加载...</loading>-->
 
 <!--页面标题栏-->
-<view class="fishpondHeader" style="positin:fixed;top: 0rpx; height: 100rpx;width: 100%">
+<view class="fishpondHeader" style="positin:fixed;Top: 0rpx; height: 100rpx;width: 100%">
     <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:3%;height: 50%;width: 50rpx" />
     <view class="fishpondTabar">
         <view class="fpTabarSelect" wx:for-items="{{fishpondTabarList}}" wx:key="fishpondTabarList">
@@ -35,33 +35,51 @@
     <text style="font-size: 60%;color: rgb(84,78,88);margin-left:15rpx">弹琴是件快乐又痛苦的事情，就像活在这个世界上</text>
 </view>
 
+<view class="divLine" style="height: 15rpx;" />
 <view class="divLine" style="height: 20rpx;background-color: #e4ecef" />
 
 <!--页面内分页-->
 <view style="height: 1000rpx;width: 100%">
-    <swiper style="height: 100%" current="{{swiperCurrent}}">
+    <swiper style="height: 100%" current="{{swiperCurrent}}" bindchange="swiperChange">
         <!--吉他屋论坛页面-->
         <swiper-item>
-            <view class="forumHearder">
-                <text style="font-size: 80%;font-weight:bold;margin-left:18rpx">已经关注{{attentionNum}}鱼</text>
+            <view class="bbsHearder">
+                <text style="font-size: 80%;margin-left:18rpx">已关注{{attentionNum}}条鱼</text>
+                <view style="height:75%;width:140rpx;display:flex;justify-content:center;align-items:center;margin-right:18rpx;background-color:#a8e8d0;border-radius:1em;">
+                    <text style="font-size: 75%;color:#fff">完成</text>
+                </view>
             </view>
             <!-- 分割线 -->
-            <view class="divLine" style="height: 4rpx;background-color: #dadada;margin-bottom: 10rpx" />
-            <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
-                <view class="forumContains">
-                    <block wx:for-items="{{fishpondForumList}}" wx:key="fishpondForumList">
-                        <view class="forumContainsTop">
-                            <image class="forumProfileImage" src="{{item.profileImage}}"/>
-                            <view class="forumtopPassInfo">
-                                <text class="forumtopUsrName" style="font-weight:bold">{{item.name}}</text>
-                                <text class="forumtopPassTime" style="font-size:70%;margin:5rpx 10rpx">{{item.passtime}}</text>
+            <view class="divLine" style="height: 3rpx;background-color: #dadada;margin-bottom: 10rpx" />
+            <scroll-view scroll-y="true" style="height: 100%">
+                <view class="bbsContains">
+                    <block wx:for-items="{{fishpondBbsList}}" wx:key="fishpondBbsList">
+                        <!--论坛帖头部样式-->
+                        <view class="bbsContainsTop">
+                            <image class="bbsProfileImage" src="{{item.profileImage}}"/>
+                            <view class="bbsTopPassInfo">
+                                <text class="bbsTopUsrName" style="font-weight:bold">{{item.name}}</text>
+                                <text class="bbsTopPassTime" style="font-size:70%;margin:5rpx 10rpx">{{item.passtime}}</text>
                             </view>
-                            <view class="forumtopViewCnt">
-                                <image class="forumViewImage" src="{{item.viewImage}}" />
+                            <view class="bbsTopViewCnt">
+                                <image class="bbsViewImage" src="{{item.viewImage}}" />
                                 <text style="font-size:65%;font-weight:bold;margin:0 10rpx">{{item.viewCnt}}</text>
                             </view>
                         </view>
-                        <image mode="scaleToFill" src="{{item}}"/>
+                        <!--帖子内容-->
+                        <!--<image mode="scaleToFill" src="{{item}}"/>-->
+                        <!--帖子底部样式-->
+                        <view class="bbsContainsBottom">
+                            <view class="bbsUpvote">
+                                <image class="bbsUpvoteImage" src="{{item.upvoteImage}}" />
+                                <text class="bbsUpvoteCnt"  style="font-size:75%;color:#9c9c9c">{{item.upvoteCnt}}</text>
+                            </view>
+                            <view class="bbsComment">
+                                <image class="bbsCommentImage" src="{{item.commentImage}}" />
+                                <text class="bbsCommentCnt" style="font-size:75%;font-weight:bold;color:#9c9c9c">{{item.conmmentCnt}}</text>
+                            </view>
+                        </view>
+                        <!--底部分割线-->
                         <view class="divLine" style="height: 3rpx;width: 85%;margin: 5rpx 0 5rpx 0;background-color: #cfced8" />
                     </block>
                 </view>

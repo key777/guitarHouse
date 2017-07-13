@@ -25,41 +25,42 @@
     align-items: center;
 }
 
-.forumHearder{
+.bbsHearder{
     position: relative;
-    height: 60rpx;
+    height: 80rpx;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.forumContains{
+.bbsContains{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.forumContainsTop{
+.bbsContainsTop{
     position: relative;
     height: 250rpx;
     width: 85%;
-    padding-top: 60rpx;
+    padding-Top: 60rpx;
     display: flex;
 }
-.forumProfileImage{
+.bbsProfileImage{
     height: 150rpx;
     width: 150rpx;
     border-radius: 150rpx;
 }
 
-.forumtopPassInfo{
+.bbsTopPassInfo{
     display: flex;
     flex-direction: column;
     margin: 20rpx 20rpx;
 }
 
-.forumtopViewCnt{
+.bbsTopViewCnt{
     position: absolute;
     height: 40rpx;
     margin: 30rpx;
@@ -68,9 +69,41 @@
     align-items: center;
 }
 
-.forumViewImage{
+.bbsViewImage{
     height: 40rpx;
     width: 40rpx;
+}
+
+.bbsContainsBottom{
+    position: relative;
+    height: 50rpx;
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.bbsUpvote{
+    display: flex;
+    align-items: center;
+    margin-left: 10rpx;
+}
+
+.bbsUpvoteImage{
+    height: 30rpx;
+    width: 30rpx;
+    margin: 0 8rpx 10rpx;
+}
+
+.bbsComment{
+    display: flex;
+    align-items: center;
+    margin-left: 60rpx;
+}
+
+.bbsCommentImage{
+    height: 30rpx;
+    width: 30rpx;
+    margin-right: 8rpx;
 }
 
 

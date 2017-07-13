@@ -16,44 +16,50 @@ Page({
     contentItems:['','','',''],
     listItems:['','','','','','',''],
     attentionNum: 0,
-    fishpondForumList: []
+    fishpondBbsList: []
   },
   onLoad: function () {
     var that = this;
     var requestArg = {
-          url: 'http://localhost:80/json/fishpondForum.json',
+          url: 'http://localhost:80/json/fishpondBbs.json',
           data: null};
 
     // 页面初始化时默认显示鱼塘论坛页
     app.requestData(requestArg, function(res){
       that.setData({
         // 拼接数组
-
-        fishpondForumList: that.data.fishpondForumList.concat(res.data),
+        fishpondBbsList: that.data.fishpondBbsList.concat(res.data),
         loadingHidden: true,
         // maxtime: res.data.info.maxtime
       })
     });
   },
-// 动态滚动展示页面
-  switchSwiper: function(e){
-    var that = this;
-    var id = e.currentTarget.id;
 
-    console.log(e.currentTarget.id);
+// 动态展示也发生变化时改变聚焦标题和切换展示页面
+  switchChangeSet: function(pageId){
+    var that = this;
+
     for (var i in that.data.fishpondTabarList){
-      if (id == i){
+      if (pageId == i){
         that.data.fishpondTabarList[i].selection = true;
       }else{
         that.data.fishpondTabarList[i].selection = false;
       }
     }
 
-    console.log(that.data.fishpondTabarList[id].style);
     that.setData({
-      swiperCurrent: e.currentTarget.id,
+      swiperCurrent: pageId,
       fishpondTabarList: that.data.fishpondTabarList,
-      fishpondForumList: that.data.fishpondForumList
+      fishpondBbsList: that.data.fishpondBbsList
     })
   },
+
+// 通过标题动态滚动展示页面
+  switchSwiper: function(e){
+    this.switchChangeSet(e.currentTarget.id);
+  },
+// 通过滑动切换展示页面
+  swiperChange: function(e){
+    this.switchChangeSet(e.detail.current);
+  }
 })
