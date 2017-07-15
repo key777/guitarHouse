@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0rpx;
+    height: 100rpx;
+    width: 100%;
 }
 
 .fishpondTabar{
@@ -104,6 +107,13 @@
     height: 30rpx;
     width: 30rpx;
     margin-right: 8rpx;
+}
+
+.musicScoreData{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
