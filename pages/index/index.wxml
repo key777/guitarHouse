@@ -22,7 +22,7 @@
   <!-- 分割线 -->
     <block wx:for-items="{{dailyList}}" wx:key="dailyList">
       <view class="dailyContainsView">
-        <image mode="scaleToFill" src="{{item.profile_image}}" style="width: 90%"/>
+        <image mode="scaleToFill" src="{{item.profile_image}}" style="width: 90%;-webkit-filter:brightness(0.6)"/>
         <view class="dailyContainsText">   
           <test style="position: relative;font-size: 100%;left: 6%">{{item.dailyTitle}}</test>
           <text style="position: relative;font-size: 65%;left: 8%">{{item.dailyConfig}}</text>

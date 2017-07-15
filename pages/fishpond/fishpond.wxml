@@ -71,8 +71,8 @@
                         <!--帖子底部样式-->
                         <view class="bbsContainsBottom">
                             <view class="bbsUpvote">
-                                <image class="bbsUpvoteImage" src="{{item.upvoteImage}}" />
-                                <text class="bbsUpvoteCnt"  style="font-size:75%;color:#9c9c9c">{{item.upvoteCnt}}</text>
+                                <image class="bbsUpvoteImage" src="{{item.upvoteImage}}"/>
+                                <text class="bbsUpvoteCnt"  style="font-size:75%;font-weight:bold;color:#9c9c9c">{{item.upvoteCnt}}</text>
                             </view>
                             <view class="bbsComment">
                                 <image class="bbsCommentImage" src="{{item.commentImage}}" />

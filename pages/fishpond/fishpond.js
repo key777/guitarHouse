@@ -2,6 +2,7 @@ var app = getApp()
 
 Page({
   data:{
+    loadingHidden: false,
     fishpondTabarList: [
       {id:"0",selection:true,data:"鱼塘"},
       {id:"1",selection:false,data:"音乐达人"},
@@ -29,7 +30,7 @@ Page({
       that.setData({
         // 拼接数组
         fishpondBbsList: that.data.fishpondBbsList.concat(res.data),
-        loadingHidden: true,
+        loadingHidden: false,
         // maxtime: res.data.info.maxtime
       })
     });
@@ -61,5 +62,9 @@ Page({
 // 通过滑动切换展示页面
   swiperChange: function(e){
     this.switchChangeSet(e.detail.current);
+  },
+  // 测试函数
+  testFunction: function(e){
+
   }
 })
