@@ -20,6 +20,7 @@
 <view class="fishpondHeader">
     <image src="../../images/addFriend.png" mode="scaleToFill" style="position: relative;left:3%;height: 50%;width: 50rpx" />
     <view class="fishpondTabar">
+
         <view class="fpTabarSelect" wx:for-items="{{fishpondTabarList}}" wx:key="fishpondTabarList">
             <text bindtap="switchSwiper" id="{{item.id}}" >{{item.data}}</text>
             <view hidden="{{!item.selection}}" class="divLine" style="height: 7rpx;width: 60%;background: #48464b" />
@@ -39,7 +40,7 @@
 <view class="divLine" style="height: 20rpx;background: #e4ecef" />
 
 <!--页面内分页-->
-<view hidden="{{loadingHidden}}" style="height: 1000rpx;width: 100%">
+<view hidden="{{loadingHidden}}" style="height: 930rpx;width: 100%">
     <swiper style="height: 100%" current="{{swiperCurrent}}" bindchange="swiperChange">
         <!--吉他屋论坛页面-->
         <swiper-item>
@@ -97,14 +98,30 @@
             </scroll-view>        
         </swiper-item>
         <!--曲谱页面-->
-        <swiper-item style="background: yellow">
+        <swiper-item>
             <scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
             <!-- 分割线 -->
-                <block wx:for-items="{{imgUrls}}"  wx:key="imgUrls">
-                    <view class="musicScoreData">
-                        <image mode="scaleToFill" src="{{item}}" style="height:100%;width: 100%"/>
-                    </view>
-                </block>
+                <view class="musicScoreContains">
+                    <block wx:for-items="{{fishpondMusicScoreList}}"  wx:key="fishpondMusicScoreList">
+                    <!--页面内元素-->
+                        <view class="musicScoreItems">
+                            <!--曲谱文字信息-->
+                            <view class="musicScoreInfo">
+                                <text class="scoreTitle" style="font-size:90%;font-weight:bold;margin:55rpx 0 0 15rpx">{{item.scoreTitle}}</text>
+                                <text class="scoreAuthor" style="font-size:65%;margin:10rpx 0 0 40rpx">{{item.scoreAuthor}}</text>
+                                <view class="scoreType">
+                                    <view class="scoreTypeText">
+                                        <text style="font-size:60%;color:#fff">{{item.scoreType}}</text>
+                                    </view>
+                                        <image mode="scaleToFill" src="../../images/scoreType.png" style="height:40rpx;width:40rpx;margin-left:10rpx" />
+                                </view>
+                            </view>
+                            <!--曲谱图片描素-->
+                            <image mode="scaleToFill" src="{{item.scoreImage}}" style="height:90%;width:45%;"/>
+                        </view>
+                        <view class="divLine" style="height: 3rpx;width: 95%;margin: 10rpx 0 10rpx ;background: #ececec" />
+                    </block>
+                </view>
             </scroll-view>        
         </swiper-item>
     </swiper>

@@ -2,8 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/forum/sdf",
-    "pages/forum/forum",
     "pages/fishpond/musicScore/musicScore",
     "pages/fishpond/fishpond"
   ],
@@ -38,7 +36,7 @@
         "text": "商城"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/fishpond/fishpond",
         "iconPath": "images/tb2-off.png",
         "selectedIconPath": "images/tb2-on.png",
         "text": "鱼塘"

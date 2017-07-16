@@ -8,7 +8,7 @@ Page({
       {id:"1",selection:false,data:"音乐达人"},
       {id:"2",selection:false,data:"曲谱"}
     ],
-    swiperCurrent: "2",
+    swiperCurrent: "0",
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -17,19 +17,21 @@ Page({
     contentItems:['','','',''],
     listItems:['','','','','','',''],
     attentionNum: 0,
-    fishpondBbsList: []
+    fishpondBbsList: [],
+    fishpondMusicScoreList: []
   },
   onLoad: function () {
     var that = this;
     var requestArg = {
-          url: 'http://localhost:80/json/fishpondBbs.json',
+          url: 'http://localhost:80/json/fishpond.json',
           data: null};
 
     // 页面初始化时默认显示鱼塘论坛页
     app.requestData(requestArg, function(res){
       that.setData({
         // 拼接数组
-        fishpondBbsList: that.data.fishpondBbsList.concat(res.data),
+        fishpondBbsList: that.data.fishpondBbsList.concat(res.data.bbs),
+        fishpondMusicScoreList: that.data.fishpondMusicScoreList.concat(res.data.musicScore),
         loadingHidden: false,
         // maxtime: res.data.info.maxtime
       })
@@ -50,8 +52,8 @@ Page({
 
     that.setData({
       swiperCurrent: pageId,
+      // 用于切换底部选中时的下划线
       fishpondTabarList: that.data.fishpondTabarList,
-      fishpondBbsList: that.data.fishpondBbsList
     })
   },
 

@@ -108,13 +108,51 @@
     width: 30rpx;
     margin-right: 8rpx;
 }
-
-.musicScoreData{
-    height: 30%;
+.musicScoreContains{
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+.musicScoreItems{
+    position: relative;
+    height: 270rpx;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.musicScoreInfo{
+    position: relative;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreType{
+    position: absolute;
+    height:19%;
+    bottom: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.scoreTypeText{
+    height:85%;
+    width:127rpx;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:30rpx;
+    background:#28C290;
+    border-radius:1.2em;
+}
+
+
 
 
 
