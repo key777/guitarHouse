@@ -161,7 +161,7 @@ text{
     position: relative;
     height: 60rpx;
     width: 100%;
-    left: 10%;
+    left: 7%;
     display: flex;
     align-items: center;
 }

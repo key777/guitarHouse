@@ -108,7 +108,7 @@
                             <!--曲谱文字信息-->
                             <view class="musicScoreInfo">
                                 <text class="scoreName" style="font-size:90%;font-weight:bold;margin:40rpx 0 15rpx 30rpx">{{item.scoreTitle}}</text>
-                                <!--分类信息-->
+                                <!--曲谱分类信息-->
                                 <view class="scoreInfoElement">
                                     <image class="scoreInfoImg" mode="scaleToFill" src="{{fishpondIconUrlList.scoreSortIcon}}" />
                                     <text>{{item.scoreSort}}</text>

@@ -36,9 +36,9 @@
         "text": "商城"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/tb2-off.png",
-        "selectedIconPath": "images/tb2-on.png",
+        "pagePath": "pages/fishpond/fishpond",
+        "iconPath": "images/tb4-off.png",
+        "selectedIconPath": "images/tb4-on.png",
         "text": "鱼塘"
       },
       {
