@@ -8,7 +8,7 @@ Page({
       {id:"1",selection:false,data:"音乐达人"},
       {id:"2",selection:false,data:"曲谱"}
     ],
-    swiperCurrent: "0",
+    swiperCurrent: "2",
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -18,7 +18,8 @@ Page({
     listItems:['','','','','','',''],
     attentionNum: 0,
     fishpondBbsList: [],
-    fishpondMusicScoreList: []
+    fishpondMusicScoreList: [],
+    fishpondIconUrlList: null
   },
   onLoad: function () {
     var that = this;
@@ -32,6 +33,7 @@ Page({
         // 拼接数组
         fishpondBbsList: that.data.fishpondBbsList.concat(res.data.bbs),
         fishpondMusicScoreList: that.data.fishpondMusicScoreList.concat(res.data.musicScore),
+        fishpondIconUrlList: res.data.fishpondIconUrlList,
         loadingHidden: false,
         // maxtime: res.data.info.maxtime
       })

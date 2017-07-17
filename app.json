@@ -25,8 +25,8 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "iconPath": "images/tbfm-off.png",
-        "selectedIconPath": "images/tbfm-on.png",
+        "iconPath": "images/tb2-off.png",
+        "selectedIconPath": "images/tb2-on.png",
         "text": "课程"
       },
       {
@@ -36,7 +36,7 @@
         "text": "商城"
       },
       {
-        "pagePath": "pages/fishpond/fishpond",
+        "pagePath": "pages/index/index",
         "iconPath": "images/tb2-off.png",
         "selectedIconPath": "images/tb2-on.png",
         "text": "鱼塘"

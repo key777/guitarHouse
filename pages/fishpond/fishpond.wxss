@@ -1,3 +1,9 @@
+text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .fishpondHeader{
     position: relative;
     display: flex;
@@ -151,8 +157,24 @@
     background:#28C290;
     border-radius:1.2em;
 }
+.scoreInfoElement{
+    position: relative;
+    height: 60rpx;
+    width: 100%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+}
 
+.scoreInfoElement text{
+    font-size: 60%;
+    margin: 0 50rpx 0 15rpx;
+}
 
+.scoreInfoElement image{
+    height:30rpx;
+    width:30rpx;
+}
 
 
 

@@ -107,13 +107,23 @@
                         <view class="musicScoreItems">
                             <!--曲谱文字信息-->
                             <view class="musicScoreInfo">
-                                <text class="scoreTitle" style="font-size:90%;font-weight:bold;margin:55rpx 0 0 15rpx">{{item.scoreTitle}}</text>
-                                <text class="scoreAuthor" style="font-size:65%;margin:10rpx 0 0 40rpx">{{item.scoreAuthor}}</text>
+                                <text class="scoreName" style="font-size:90%;font-weight:bold;margin:40rpx 0 15rpx 30rpx">{{item.scoreTitle}}</text>
+                                <!--分类信息-->
+                                <view class="scoreInfoElement">
+                                    <image class="scoreInfoImg" mode="scaleToFill" src="{{fishpondIconUrlList.scoreSortIcon}}" />
+                                    <text>{{item.scoreSort}}</text>
+                                    <image class="scoreInfoImg" mode="scaleToFill" src="{{fishpondIconUrlList.scoreAuthorIcon}}" />
+                                    <text>{{item.scoreAuthor}}</text>
+                                </view>
+                                <view class="scoreInfoElement">
+                                    <image class="scoreInfoImg" mode="scaleToFill" src="{{fishpondIconUrlList.scoreTuneIcon}}" />
+                                    <text>{{item.scoreTune}}</text>
+                                </view>                            
                                 <view class="scoreType">
                                     <view class="scoreTypeText">
                                         <text style="font-size:60%;color:#fff">{{item.scoreType}}</text>
                                     </view>
-                                        <image mode="scaleToFill" src="../../images/scoreType.png" style="height:40rpx;width:40rpx;margin-left:10rpx" />
+                                        <image mode="scaleToFill" src="{{fishpondIconUrlList.scoreTypeIcon}}" style="height:40rpx;width:40rpx;margin-left:10rpx" />
                                 </view>
                             </view>
                             <!--曲谱图片描素-->
